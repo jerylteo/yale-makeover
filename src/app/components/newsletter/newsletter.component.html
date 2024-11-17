@@ -1,0 +1,22 @@
+<div [ngClass]="className" class="mt-10">
+  <div class="container mx-auto p-4">
+    <h2 class="text-3xl font-bold text-center mt-10">Get News from the Yale School of Art</h2>
+    <h2 class="text-2xl font-bold text-center mt-2">Sign Up for Our Newsletters</h2>
+    <p class="mt-4 text-center text-sm">We publish two newsletters during the academic year</p>
+    <div class="mt-10">
+      <div class="grid md:grid-cols-2 gap-10 text-center my-10">
+        <div [ngClass]="className.length > 0 ? 'bg-orange-50' : 'bg-white'" class="flex flex-col justify-center rounded-md p-10">
+          <h4 class="font-semibold text-sm text-gray-900">News From New Haven</h4>
+          <p class="m-4 text-xs text-gray-900">A public monthly newsletter about news and events happening on campus.</p>
+        </div>
+        <div [ngClass]="className.length > 0 ? 'bg-orange-50' : 'bg-white'" class="flex flex-col justify-center rounded-md p-10">
+          <h4 class="font-semibold text-sm text-gray-900">Week at SoA</h4>
+          <p class="m-4 text-xs text-gray-900"> A weekly community-only email listing SoA events as well as public and university events in New Haven.</p>
+        </div>
+        <div class="col-span-1 md:col-span-2">
+          <app-button className="mt-4 bg-orange-700 text-white w-full" text="Subscribe Now"></app-button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

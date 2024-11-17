@@ -1,0 +1,21 @@
+<div class="container mx-auto p-4 mt-10">
+  <h2 class="text-3xl font-bold">Current News Items</h2>
+  <div class="grid gap-10 my-10">
+    <div *ngFor="let paper of news" class="grid sm:grid-cols-3 md:grid-cols-4 gap-10 md:h-52">
+      <div class="rounded-lg md:overflow-hidden h-52">
+        <img class="rounded-lg w-full h-full object-cover " src="{{paper.image}}" alt="{{paper.title}}">
+      </div>
+      <div class="sm:col-span-2 md:col-span-3 flex flex-col">
+        <div>
+          <span class="text-xs text-gray-500">{{paper.date}}</span>
+        </div>
+        <h3 class="my-4 text-lg font-semibold">{{paper.title}}</h3>
+        <p class="text-xs text-gray-900">{{paper.caption}}</p>
+        <p class="mt-4 text-xs text-gray-900">{{paper.credits}}</p>
+        <div class="mt-auto">
+          <app-button className="mt-8 md:w-1/4 text-white bg-orange-400" text="Read More"></app-button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
